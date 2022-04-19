@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="Ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/form.css">
+    <title>MyForm</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="form">
+            <form action="#" id="form" name="myForm" method="post" enctype="multipart/form-data">
+                <div class="select">
+                    <select id="typeContribution" name="typeContribution" class="select__1" onchange="changeSelect()">
+                        <option value="0" hidden>Вид вклада</option>
+                        <option value="1">Пополняемый</option>
+                        <option value="2">Срочный</option>
+                    </select>
+                    <select id="deadlineContribution" name="deadlineContribution" class="select__2">
+                        <option value="0" hidden>Срок вклада</option>
+                        <option value="1">6 месяцев - 20%</option>
+                        <option value="2">1 год - 22%</option>
+                        <option value="3">1,5 года - 15%</option>
+                        <option value="4">2 года - 10%</option>
+                    </select>
+                </div>
+                <input class="sum" id="sum" placeholder="Сумма, руб" type="number">
+                <button class="button" type="button" onclick="validation()">Рассчитать</button>
+            </form>
+        </div>
+        <textarea id="result" disabled name="result" cols="30" rows="10" class="result"></textarea>
+
+    </div>
+ 
+<script src="../js/index.js"></script>
+</body>
+</html>
